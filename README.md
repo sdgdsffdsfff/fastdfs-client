@@ -1,1 +1,1 @@
-基于netty实现fastdfs的客户端
+基于netty实现fastdfs客户端
