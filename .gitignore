@@ -1,0 +1,19 @@
+ipse project files
+.classpath
+.project
+.settings/
+.DS_Store
+.gitignore
+.externalToolBuilders
+
+# Intellij project files
+*.iml
+.idea/
+
+# generated files
+src/main/webapp/META-INF/*
+target/
+bin/
+gen/
+logs/
+
