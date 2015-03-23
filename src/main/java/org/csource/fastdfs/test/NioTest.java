@@ -1,15 +1,15 @@
 package org.csource.fastdfs.test;
 
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.*;
+import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
+import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.bytes.ByteArrayDecoder;
 import io.netty.handler.codec.bytes.ByteArrayEncoder;
 import org.csource.fastdfs.NioHander1;
-import org.csource.fastdfs.NioHandler;
-import org.csource.fastdfs.ProtoCommon;
 
 /**
  * Created by he.wc on 2014/12/10.
@@ -31,10 +31,9 @@ public class NioTest {
                         .addLast("encoder", new ByteArrayEncoder());
             }
         });
-        bootstrap.connect("10.0.30.166",22122).channel().closeFuture().sync();
+        bootstrap.connect("120.24.75.46",22122).channel().closeFuture().sync();
 
         System.out.println("response = "+responseFuture.get());
-
 
         eventLoopGroup.shutdownGracefully();
     }
